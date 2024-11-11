@@ -18,8 +18,8 @@ load_dotenv()
 updater = Updater(os.getenv("TELEGRAM_API_TOKEN"), use_context=True)
 
 dp = updater.dispatcher
-    dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(MessageHandler(Filters.text, handle_message))
+dp.add_handler(CommandHandler("start", start))
+dp.add_handler(MessageHandler(Filters.text, handle_message))
 
     # Запуск бота
     updater.start_polling()
