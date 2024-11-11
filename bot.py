@@ -14,7 +14,7 @@ def main():
     import os
 from dotenv import load_dotenv
     
-    load_dotenv()
+load_dotenv()
     updater = Updater(os.getenv("TELEGRAM_API_TOKEN"), use_context=True)
 
     dp = updater.dispatcher
